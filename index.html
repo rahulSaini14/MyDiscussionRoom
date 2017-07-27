@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body {
+			background-color: #FFFFFF;
+		}
+		#mbody {
+			background-image: url('home.jpg');
+			background-attachment: fixed;
+			background-size: cover;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-repeat: no-repeat;
+			display: none;
+		}
+		#header {
+			background-color: #FFFFFF;
+		}
+		#site_name {
+			font-size: 80px;
+			color: #795548;
+			font-weight: bold;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			text-shadow: 5px 5px #FFFF00;
+		}
+		#middle_p {
+			background-color: rgba(255,0,0,0.6);
+			color: #FFFFFF;
+			font-size: 40px;
+
+		}
+		#register {
+			max-width: 320px;
+			max-height: 200px;
+			background-color: #03A9F4;
+			margin-bottom: 30px;
+			margin-top: 30px;
+		}
+		#login {
+			max-width: 320px;
+			max-height: 200px;
+			background-color: #FF5722;
+			margin-bottom: 30px;
+			margin-top: 30px;
+		}
+		.upper_txt_btn {
+			font-size: 15px;
+			color: #000000;
+		}
+		.middle_txt_btn {
+			font-size: 60px;
+			font-weight: bold;
+			color: #FFFFFF;
+			text-shadow: 5px 5px #000000;
+		}
+		.lower_txt_btn {
+			font-size: 20px;
+			color: #000000;
+		}
+		#loading {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background-position: center;
+			z-index: 9999;
+			background:url(loading_gif.gif);
+			background-repeat: no-repeat;
+		}
+		#click {
+			font-weight: bold;
+			background-color: #455A64;
+			color: #FFFFFF;
+			padding: 10px;
+			font-size: 20px;
+			cursor: pointer;
+		}
+		#submenu {
+			display: none;
+			background-color: #78909C;
+			font-size: 16px;
+		}
+	</style>
+	<title>Home</title>
+</head>
+<body><div id="loading"></div><div id="mbody"><center>
+	<header id="header">
+		<div>
+			<p id="site_name">My Discussion Room</p>
+			<div id="menu">
+				<div id="click">Menu</div>
+				<div id="submenu">
+					<a href="index.html" style="color: #FFFFFF;">Home</a><br/><br/>
+					<a href="login.php" style="color: #FFFFFF;">Login</a><br/><br/>
+					<a href="registration_type.php" style="color: #FFFFFF;">Register</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="main_content">
+		<p id="middle_p">Hello, Thank you for visiting our website. Here you can take participation in many discussions. So let's start.....</p>
+		<button id="register" onclick="window.location.href='registration_type.php';">
+			<span class="upper_txt_btn">
+				Lets Start 
+			</span><br/>
+			<span class="middle_txt_btn">
+				Register now
+			</span><br/>
+			<span class="lower_txt_btn">
+				ready for trying something new !
+			</span>
+		</button>
+		<br/>
+		<button id="login" onclick="window.location.href='login.php';">
+			<span class="upper_txt_btn">
+				Already a member ?
+			</span><br/>
+			<span class="middle_txt_btn">
+				Login here
+			</span><br/>
+			<span class="lower_txt_btn">
+				Good luck !
+			</span>
+		</button>
+	</div>
+	<footer style="color: #FFFFFF;font-size: 20px;">
+		<table style="padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;background-color: #000000;table-layout: fixed;width: 500px;">
+			<tr>
+				<td><a href="index.html">Home</a></td>
+				<td><a href="home_aboutus.html">About us</a></td>
+				<td><a href="home_tandc.html">Terms and conditions</a></td>
+			</tr>
+		</table>
+	</footer>
+</center>
+</div>
+</body>
+<script src="jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(window).on('load',function() {
+		$('#loading').hide();
+		$('body').css("background-color","#90CAF9");
+		$('#mbody').show(1000);
+		$('#click').click(function(){
+			$('#submenu').slideToggle(500);
+		});
+	});
+</script>
+</html>
