@@ -7,6 +7,7 @@ if (!isset($_SESSION['login_username'])) {
 <!DOCTYPE html>
 <html>
 <head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<style type="text/css">
 		body {
 			background-color: #FFFFFF;
@@ -33,9 +34,7 @@ if (!isset($_SESSION['login_username'])) {
 			max-width: 500px;
 		}
 		#commentid {
-			height: 50px;
 			width: 200px;
-			margin-top: 20px;
 			margin-bottom: 0px;
 		}
 		#textlimit {
@@ -94,14 +93,14 @@ if (!isset($_SESSION['login_username'])) {
 	<center>
 		<div id="allcontent">
 			<p id="mainHeading">Comment</p>
-			<div id="mainform">
+			<div id="mainform"><br/>
 				<form action="comment_store.php" method="post" autocomplete="off">
-					<input type="text" maxlength="200" placeholder="write comment" name="comment" id="commentid" onkeyup="forminput()" required />
+					<textarea class="form-control" rows="3" name="comment" placeholder="write comment" type="text" maxlength="200" id="commentid" onkeyup="forminput()" required></textarea>
 					<p id="textlimit">Maximum word limit is 200</p>
 					<input type="submit" name="submit" value="Post" id="submit">
 				</form>
 			</div>
-		</div>
+		</div><br/><br/>
 	</center>
 </div>
 <script src="jquery-3.2.1.js"></script>
